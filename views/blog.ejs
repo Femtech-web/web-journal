@@ -1,0 +1,33 @@
+<%- include('header') -%>
+<body>
+    <%- include('nav') -%>
+    <section class="container">
+        <h1 class="heading">Home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptas excepturi illum fugit expedita in, quibusdam sequi 
+            saepe labore consequatur neque harum nostrum quae hic facere sunt 
+            culpa id nam deleniti ipsum praesentium ut reiciendis! Pariatur rerum, 
+            in amet at accusamus, provident hic facilis quos id asperiores voluptates. 
+            Quisquam aliquam magnam hic consectetur, ea atque officiis. Saepe nihil sequi
+             facere adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dolore?
+        </p>
+    </section>
+    <% if(blogData.length !== 0){ %>
+        <% for(let eachData of blogData){ %>
+            <section class="container">
+                <h1 class="heading"><%= eachData.title  %></h1>
+                <p><%= eachData.post.slice(0,300) %></p>
+                <form action="/read" method="post" class="read-form">
+                    <button type="submit" class="span" name="readBtn" value="<%= eachData._id %>">...Read More</button>
+                </form>
+            </section>
+       <% } %>
+   <% } else { %>
+    <form action="/empty" method="post">
+        <button class="empty" type="submit">compose</button>
+    </form>
+  <% } %>
+    
+  <%- include('footer') -%>
+</body>
+</html>

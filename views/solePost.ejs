@@ -1,0 +1,13 @@
+<%- include('header') -%>
+<body>
+    <%- include('nav') -%>
+    <section class="container">
+        <h1 class="heading"><%= soleBlog.title  %></h1>
+        <p><%= soleBlog.post %></p>
+    </section>
+    <form action="/home" method="post">
+        <button class="home">Go Home</button>
+    </form>
+    <%- include('footer') -%>
+</body>
+</html>
