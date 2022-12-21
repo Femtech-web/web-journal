@@ -13,15 +13,17 @@
         </p>
     </section>
     <% if(blogData.length !== 0){ %>
-        <% for(let eachData of blogData){ %>
-            <section class="container">
-                <h1 class="heading"><%= eachData.title  %></h1>
-                <p><%= eachData.post.slice(0,300) %></p>
-                <form action="/read" method="post" class="read-form">
-                    <button type="submit" class="span" name="readBtn" value="<%= eachData._id %>">...Read More</button>
-                </form>
-            </section>
-       <% } %>
+        <div class="cover">
+            <% for(let eachData of blogData){ %>
+                    <section class="container">
+                        <h1 class="heading"><%= eachData.title  %></h1>
+                        <p><%= eachData.post.slice(0,300) %></p>
+                        <form action="/read" method="post" class="read-form">
+                            <button type="submit" class="span" name="readBtn" value="<%= eachData._id %>">...Read More</button>
+                        </form>
+                    </section>
+            <% } %>
+        </div>
    <% } else { %>
     <form action="/empty" method="post">
         <button class="empty" type="submit">compose</button>
