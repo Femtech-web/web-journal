@@ -224,6 +224,10 @@ body{
         margin-bottom: 5px;
     }
 
+    .about .contact{
+        margin-bottom: 30px;
+    }
+
     .home{
         margin-bottom: 20px;
     }
@@ -243,10 +247,6 @@ body{
 
     .cancel{
         display: none;
-    }
-
-    .about .contact{
-        margin-bottom: 20px;
     }
 
     .container h1{
