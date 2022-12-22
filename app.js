@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 const run = async () => {
-    await mongoose.connect('mongodb+srv://admin-femi:oluwafemi@cluster0.ulvxftn.mongodb.net/blogDB/blogDB'); 
+    await mongoose.connect('mongodb+srv://admin-femi:oluwafemi@cluster0.ulvxftn.mongodb.net/blogDB'); 
 }
 mongoose.set('strictQuery', false);
  run();
