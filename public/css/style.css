@@ -219,6 +219,11 @@ body{
         z-index: 5;
     }
 
+    .name-head{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
     .home{
         margin-bottom: 20px;
     }
@@ -238,6 +243,10 @@ body{
 
     .cancel{
         display: none;
+    }
+
+    .about .contact{
+        margin-bottom: 20px;
     }
 
     .container h1{

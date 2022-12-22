@@ -3,20 +3,21 @@
     <%- include('nav') -%>
     <section class="container">
         <h1 class="heading">Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Voluptas excepturi illum fugit expedita in, quibusdam sequi 
-            saepe labore consequatur neque harum nostrum quae hic facere sunt 
-            culpa id nam deleniti ipsum praesentium ut reiciendis! Pariatur rerum, 
-            in amet at accusamus, provident hic facilis quos id asperiores voluptates. 
-            Quisquam aliquam magnam hic consectetur, ea atque officiis. Saepe nihil sequi
-             facere adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dolore?
+        <p>#BestChristmasExperience <br>
+            Hello Friends, I made this simple website where you can share your 
+            previous best Christmas experiences. The Loy, Laughter’s, Suprises, 
+            Happiness and even worst Experiences. Just go to the “compose” section, 
+            on the "title" input, input your full name and on the "post" share your experience and click “publish”. 
+             As we begin this interesting funfair, you can get to be thrilled and Entertained by all kinds of different 
+             peoples experience. Thank You!
+            
         </p>
     </section>
     <% if(blogData.length !== 0){ %>
         <div class="cover">
             <% for(let eachData of blogData){ %>
                     <section class="container">
-                        <h1 class="heading"><%= eachData.title  %></h1>
+                        <h1 class="heading name-head"><%= eachData.title  %></h1>
                         <p><%= eachData.post.slice(0,300) %></p>
                         <form action="/read" method="post" class="read-form">
                             <button type="submit" class="span" name="readBtn" value="<%= eachData._id %>">...Read More</button>
